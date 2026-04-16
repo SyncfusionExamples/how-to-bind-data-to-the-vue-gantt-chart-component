@@ -1,20 +1,53 @@
-# How to Bind Data to the Vue Gantt Chart Component
+# Vue Gantt Chart Data Binding Example
 
-A quick-start project that helps you bind hierarchical, self-referential, and remote data to the Vue Gantt Chart component. This project contains code to access the online data service with the help of the Syncfusion data manager.
+This repository contains a Vue 3 app that binds a Syncfusion Gantt chart to remote task data using `DataManager` and `WebApiAdaptor`.
 
-Refer to the following documentation for how to bind data in the Syncfusion Vue Gantt Chart component: 
-https://ej2.syncfusion.com/vue/documentation/gantt/data-binding
+## Project overview
 
-Check out this online data-binding example for the Syncfusion Vue Gantt Chart component: 
-https://ej2.syncfusion.com/vue/demos/#/material/gantt/remote-data.html
+The app renders a Syncfusion `<ejs-gantt>` chart in `src/App.vue` with columns for Task ID, Task Name, and Start Date. It loads hierarchical task data from a remote endpoint.
 
-Refer to the following Syncfusion Vue Gantt Chart getting started video:
-https://www.youtube.com/watch?v=S1GbWmVcre0
- 
-## Project prerequisites
+## Key files
 
-Make sure that you have the latest versions of Vue, Node, Vue Class Component, and Visual Studio Code in your machine before starting to work on this project.
+- `src/App.vue`
+  - Renders the Gantt chart and maps fields such as `TaskId`, `TaskName`, `StartDate`, `EndDate`, `Duration`, `Progress`, `Predecessor`, and `SubTasks`.
+- `src/main.js`
+  - Creates the Vue app and registers a Syncfusion license.
+- `src/data.js`
+  - Includes local sample data (`projectNewData`, `selfData`) not currently used.
+- `src/components/HelloWorld.vue`: default Vue CLI starter.
 
-### How to run this application?
+## Dependencies
 
-To run this application, you need to clone the `how-to-bind-data-to-the-vue-gantt-chart-component` repository and then open it in Visual Studio Code. Now, simply install all the necessary react packages into your current project using the `npm install` command and run your project using the `npm run serve` command.
+- `vue` `^3.2.13`
+- `@syncfusion/ej2-vue-gantt` `^21.1.38`
+- `core-js`
+
+## Setup
+
+1. Install dependencies:
+
+```bash
+npm install
+```
+
+2. Run the app:
+
+```bash
+npm run serve
+```
+
+3. Open the local site in your browser:
+
+```text
+http://localhost:8080/
+```
+
+## Notes
+
+- The current code uses remote data via `DataManager` and `WebApiAdaptor`.
+- `src/data.js` contains local sample data not imported into `App.vue`.
+
+## Links
+
+- Syncfusion Gantt docs: https://ej2.syncfusion.com/vue/documentation/gantt/data-binding
+- Remote data demo: https://ej2.syncfusion.com/vue/demos/#/material/gantt/remote-data.html
